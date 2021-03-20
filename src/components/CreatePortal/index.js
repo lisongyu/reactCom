@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 export default class CreatePortal extends Component {
-
   constructor(props) {
     super(props);
     this.body = document.querySelector('body')
