@@ -5,6 +5,7 @@ import Search from './search'
 import Lists from './lists';
 
 import { getLists } from '@/services/search';
+import LazyLoad from '@/components/LazyLoad'
 import Consumer from './consumer';
 export default class Index extends Component {
 
@@ -33,14 +34,22 @@ export default class Index extends Component {
   }
 
   render() {
+    const houses = {
+      info: {
+
+      }
+    }
     return (
+
       <div>
+        {houses?.info2?.id}
         <SearchContext.Provider value={{
           state: this.state,
           dispatch: this.handleDispatch
         }}>
           <Search />
-          <Lists />
+          {/* <Lists /> */}
+          <LazyLoad component={import('./lists')} />
           <Consumer />
         </SearchContext.Provider>
 

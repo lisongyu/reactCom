@@ -32,6 +32,12 @@ export default class index extends Component {
               dva
             </Link>
 
+
+          </List.Item>
+          <List.Item>
+            <Link to="/class/lazy-load">
+              lazyLoad
+              </Link>
           </List.Item>
           <List.Item>
             <Link to="/class/modal">
